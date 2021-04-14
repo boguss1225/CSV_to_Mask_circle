@@ -11,7 +11,7 @@ It can be run through terminal.\
 ![picture](https://github.com/boguss1225/CSVtoMask/blob/main/screenshot/screenshot2.png)
 
 ## Output
-The output will be a series of mask images which are created according to filename.
+The output will be a series of mask images (.png) which are created according to filename.
 Each mask image is saved as the name of the designated filename.\
 ![picture](https://github.com/boguss1225/CSVtoMask/blob/main/screenshot/screenshot3.png)\
 The file contains one to many labels which are circle shape in multiple locations within the image frame.

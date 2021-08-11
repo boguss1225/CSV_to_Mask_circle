@@ -13,6 +13,7 @@ def hashCode(label):
         hash = ord(label[i]) + ((hash << 5) - hash)
     return hash
 
+
 def intToRGB(i):
     c = (i & 0x00FFFFFF)
     c = hex(c).lstrip('0x')
@@ -21,6 +22,8 @@ def intToRGB(i):
     return str[0:6-len(c)] + c
 
 # Draw dot
+
+
 def drawDot(image, x, y, radius, label, imageHeight):
     # get dot color
     dotColor = "#" + intToRGB(hashCode(label))
@@ -83,7 +86,8 @@ while(checkEnterCSV):
                         # Draw dot
                         drawDot(image, float(row[2]), float(row[3]),
                                 float(row[4]), row[1], float(row[6]))
-                        image.save(imagesPath+'/'+row[0])
+                        image.save(imagesPath+'/' +
+                                   row[0], quality=100, subsampling=0)
                         line_count += 1
                     # Different file name
                     else:
@@ -96,7 +100,8 @@ while(checkEnterCSV):
                         # Draw dot
                         drawDot(image, float(row[2]), float(row[3]),
                                 float(row[4]), row[1], float(row[6]))
-                        image.save(imagesPath+'/'+row[0])
+                        image.save(imagesPath+'/' +
+                                   row[0], quality=100, subsampling=0)
                         line_count += 1
             print(f'Processed {line_count} lines.')
     else:
